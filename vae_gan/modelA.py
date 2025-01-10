@@ -356,7 +356,7 @@ DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 # --- Setup Logging ---
 logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+logger=logging.getLogger(__name__)
 
 def print_gpu_memory():
      if torch.cuda.is_available():
@@ -374,7 +374,7 @@ def setup_directories(base_dir="outputs"):
     
     return run_dir, model_dir, image_dir
 
-# --- Custom Dataset ---
+# --- Dataset ---
 class ImageDataset(Dataset):
     def __init__(self, root_dir, transform=None):
         self.root_dir = root_dir
